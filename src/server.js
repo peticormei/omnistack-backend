@@ -15,8 +15,6 @@ io.on('connection', socket => {
     socket.on('connectionRoom', box => {
         socket.join(box);
     });
-
-    console.log('ok');
 });
 
 mongoose.connect(
@@ -39,6 +37,6 @@ app.use('/files', express.static(path.resolve(__dirname, '..', 'tmp')));
 
 app.use(routes);
 
-server.listen(process.env.PORT || 3000, () => {
-    console.log('server running on port 3000');
+server.listen(process.env.PORT || 3333, () => {
+    console.log('server running on port 3333');
 });
