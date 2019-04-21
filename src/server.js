@@ -39,6 +39,6 @@ app.use('/files', express.static(path.resolve(__dirname, '..', 'tmp')));
 
 app.use(routes);
 
-server.listen(3000, () => {
+server.listen(process.env.PORT || 3000, () => {
     console.log('server running on port 3000');
 });
